@@ -1,14 +1,14 @@
+const stopPlayingSounds = () => {
+  const sounds = ['applause', 'boo', 'gasp', 'tada', 'victory', 'wrong'];
+  sounds.forEach((sound) => {
+    const playingSound = document.getElementById(sound);
+    playingSound.pause();
+    sound.currentTime = 0;
+  });
+};
+
 const loadItems = () => {
-  const sounds = ['applause', 'boo', 'gasp', 'tada', 'victory', 'gasp'];
-
-  const stopPlayingSounds = () => {
-    sounds.forEach((sound) => {
-      const playingSound = document.getElementById(sound);
-      playingSound.pause();
-      sound.currentTime = 0;
-    });
-  };
-
+  const sounds = ['applause', 'boo', 'gasp', 'tada', 'victory', 'wrong'];
   sounds.forEach((sound) => {
     const btn = document.createElement('button');
     btn.classList.add('btn');
